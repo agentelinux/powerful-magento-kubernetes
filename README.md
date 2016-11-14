@@ -3,7 +3,7 @@ powerful-magento-kubernetes
 
 A VERY simple (and powerful) Magento environment provisioner for [Docker](http://www.docker.com/).
 
-![Magento & kubernetes]
+[Magento & kubernetes]
 
 * Creates a running Magento environment with a few simple commands.
 * Runs on Ubuntu (Trusty 14.04 64 Bit) \w
