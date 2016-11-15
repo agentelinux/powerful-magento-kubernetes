@@ -37,7 +37,7 @@ A VERY simple (and powerful) Magento environment provisioner for [Docker](http:/
 ## Sample Data
 
 ## Todo
-* Install Magento
+* Install Magento - OK
 * Install Percona as Service
 * Install Redis as Service
 * Install Kubernetes
