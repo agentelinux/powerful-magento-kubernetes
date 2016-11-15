@@ -7,6 +7,7 @@ upstream fastcgi_backend {
 server {
     listen 80 default_server;
     set $MAGE_ROOT /var/www/magento;
+    set $MAGE_MODE developer;
     root $MAGE_ROOT/pub;
 
     

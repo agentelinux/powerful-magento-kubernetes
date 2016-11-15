@@ -8,6 +8,7 @@ A VERY simple (and powerful) Magento environment provisioner for [Docker](http:/
 * Creates a running Magento environment with a few simple commands.
 * Runs on Ubuntu (Trusty 14.04 64 Bit) \w
   * Percona Server 5.6 (like MySQL) as Service (HA)
+  * ProxySQL
   * Redis  (Session and Page Cache)
   * HHVM 3 (PHP from Facebook)
   * Nginx 1.4 (HTTP server)
@@ -24,7 +25,7 @@ A VERY simple (and powerful) Magento environment provisioner for [Docker](http:/
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Install [Docker](http://www.docker.com/)
 * Clone or [download](https://github.com/agentelinux/powerful-magento-vagrant/archive/master.zip) this repository to the root of your project directory `git clone https://github.com/agentelinux/powerful-magento-vagrant.git`
-
+* Create cluster Kubernetes in GCP Google Container Engine
 
 ## Usage
 
@@ -36,4 +37,7 @@ A VERY simple (and powerful) Magento environment provisioner for [Docker](http:/
 ## Sample Data
 
 ## Todo
-* Install Kubernetes.
+* Install Magento
+* Install Percona as Service
+* Install Redis as Service
+* Install Kubernetes
