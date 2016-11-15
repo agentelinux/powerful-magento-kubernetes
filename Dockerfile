@@ -92,12 +92,12 @@ COPY ./index.php /var/www/public/index.php
 COPY ./src/Magento-CE-2.1.2_sample_data-2016-10-11-11-27-51.tar.gz /tmp/Magento-CE-2.1.2_sample_data-2016-10-11-11-27-51.tar.gz
 
 
-RUN /var/www/magento
+RUN mkdir -p /var/www/magento
 WORKDIR /var/www/magento
 
 RUN tar zxvf  /tmp/Magento-CE-2.1.2_sample_data-2016-10-11-11-27-51.tar.gz
 
-RUN chmod www-data:www-data -R /var/www/
+RUN chown -R www-data:www-data /var/www/
 
 ################################################################################
 # Boot
