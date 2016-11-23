@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mgto-node1
+  labels:
+    node: mgto-node1
+spec:
+  ports:
+    - port: 80
+      name: nginx
+  selector:
+    node: mgto-node1 
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mgto-node1 
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        node: mgto-node1 
+        unit: mgto-cluster
+    spec:
+      containers:
+        - resources:
+            limits: 
+              cpu: 0.3
+          image: capttofu/percona_xtradb_cluster_5_6:beta
+          name: mgto-node1
+          ports:
+            - containerPort: 80
+          env:
+            - name: MYSQL_USER
+              value: mysql
+            - name: MYSQL_PASSWORD
+              value: mysql
